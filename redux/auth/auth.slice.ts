@@ -21,8 +21,12 @@ export const authSlice = createSlice({
       state.token = action.payload;
     },
     clearAuth: (state) => {
+      console.log("Before clear Auth");
+      console.log(state.token, state.user);
       state.user = null;
       state.token = null;
+      console.log("After clear Auth");
+      console.log(state.token, state.user);
     },
   },
 });
